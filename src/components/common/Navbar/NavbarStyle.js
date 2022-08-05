@@ -23,8 +23,8 @@ export const Container = styled.div`
     align-items: center;
     h2 {
       color: #f8f9fa;
-      margin-left: 10px;
       font-family: Arial, Helvetica, sans-serif;
+      margin-left: 10px;
     }
   }
   .burger {
@@ -47,6 +47,9 @@ export const Container = styled.div`
         font-weight: 600;
         text-decoration: none;
         color: #bbb;
+        :hover {
+          color: var(--greenColor);
+        }
       }
     }
   }

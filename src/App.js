@@ -3,8 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import { NavbarData } from "./mock/NavbarMock";
 import Entrance from "./pages/Entrance/Entrance";
 const App = () => {
-  console.log(window);
-
   return (
     <>
       <Routes>
