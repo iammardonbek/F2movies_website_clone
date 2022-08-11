@@ -40,10 +40,17 @@ export const SearchBar = styled.div`
 export const Search = styled(search)`
   width: 25px;
 `;
-export const Socials = styled.div`
-  display: flex;
-  margin: 10px 0 0 0;
-  a {
-    text-decoration: none;
+
+export const Text = styled.div`
+  color: #ced4da;
+  margin-top: 30px;
+  h5 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 18px;
   }
 `;

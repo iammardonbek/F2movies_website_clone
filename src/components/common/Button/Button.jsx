@@ -14,6 +14,7 @@ const Button = ({
   type,
   flexD,
   gap,
+  transform,
 }) => {
   return (
     <Container
@@ -24,9 +25,10 @@ const Button = ({
       bgColor={bgColor}
       fontSize={fontSize}
       type={type}
-      fontColor={"white"}
+      fontColor={fontColor}
       flexD={flexD}
       gap={gap}
+      transform={transform}
     >
       <button bgColor={bgColor}>
         <p>{children}</p>

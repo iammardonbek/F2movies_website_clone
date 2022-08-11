@@ -2,11 +2,13 @@ import React from "react";
 import { Container, Search, SearchBar } from "./mainEntranceStyle";
 import Logo from "../../assets/images/logo.png";
 import Button from "../common/Button/Button";
-import { Socials } from "./mainEntranceStyle";
-import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
-import { Link } from "react-router-dom";
+import ArrowRight from "../../assets/icons/arrowRIght.png";
+
+import { useNavigate } from "react-router-dom";
+import Socials from "../common/Socials/Socials";
 
 const MainEntrance = () => {
+  const navigate = useNavigate();
   return (
     <Container>
       <img src={Logo} alt="logo" />
@@ -20,98 +22,13 @@ const MainEntrance = () => {
           width={"100px"}
         />
       </SearchBar>
-      <Socials>
-        <Link to="/">
-          <Button
-            width={"auto"}
-            height={"auto"}
-            type="social"
-            borderRadius={"0"}
-            bgColor="rgb(59, 89, 152)"
-            fontColor={"black"}
-            fontSize="14px"
-            svg={<Facebook />}
-            flexD
-          >
-            facebook
-          </Button>
-        </Link>
-        <Link to="/">
-          <Button
-            width={"auto"}
-            height={"auto"}
-            type="social"
-            borderRadius={"0"}
-            bgColor="rgb(59, 89, 152)"
-            fontColor={"black"}
-            fontSize="14px"
-            svg={<Facebook />}
-            flexD
-          >
-            facebook
-          </Button>
-        </Link>
-        <Link to="/">
-          <Button
-            width={"auto"}
-            height={"auto"}
-            type="social"
-            borderRadius={"0"}
-            bgColor="rgb(59, 89, 152)"
-            fontColor={"black"}
-            fontSize="14px"
-            svg={<Facebook />}
-            flexD
-          >
-            facebook
-          </Button>
-        </Link>
-        <Link to="/">
-          <Button
-            width={"auto"}
-            height={"auto"}
-            type="social"
-            borderRadius={"0"}
-            bgColor="rgb(59, 89, 152)"
-            fontColor={"black"}
-            fontSize="14px"
-            svg={<Facebook />}
-            flexD
-          >
-            facebook
-          </Button>
-        </Link>
-        <Link to="/">
-          <Button
-            width={"auto"}
-            height={"auto"}
-            type="social"
-            borderRadius={"0"}
-            bgColor="rgb(59, 89, 152)"
-            fontColor={"black"}
-            fontSize="14px"
-            svg={<Facebook />}
-            flexD
-          >
-            facebook
-          </Button>
-        </Link>
-        <Link to="/">
-          <Button
-            width={"auto"}
-            height={"auto"}
-            type="social"
-            borderRadius={"0"}
-            bgColor="rgb(59, 89, 152)"
-            fontColor={"black"}
-            fontSize="14px"
-            svg={<Facebook />}
-            flexD
-          >
-            facebook
-          </Button>
-        </Link>
-      </Socials>
+      <Socials />
+      <div className="button">
+        <Button onClick={() => navigate("/home")} width={"190px"}>
+          <strong>view full site</strong>
+          <img src={ArrowRight} alt="arrow" />
+        </Button>
+      </div>
     </Container>
   );
 };

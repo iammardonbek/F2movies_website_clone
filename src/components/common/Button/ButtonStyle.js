@@ -4,6 +4,7 @@ const ButtonType = ({ type }) => {
   if (type === "social") {
     return {
       padding: "5px 10px",
+      transform: "translateY(-4px)",
       margin: "0 2px",
     };
   }
@@ -14,8 +15,9 @@ export const Container = styled.div`
   display: flex;
   cursor: pointer;
   user-select: none;
+  transition: all 0.2s ease-in-out;
   align-items: center;
-  gap: ${({ gap }) => (gap ? gap : "5px")};
+  gap: ${({ gap }) => (gap ? gap : "3px")};
   flex-direction: ${({ flexD }) => (flexD ? "row-reverse" : "row")};
   justify-content: center;
   background-color: ${({ bgColor }) => (bgColor ? bgColor : "#e4ff00")};
@@ -28,8 +30,19 @@ export const Container = styled.div`
     background-color: ${({ bgColor }) => (bgColor ? bgColor : "#e4ff00")};
     border: none;
     cursor: pointer;
-
     text-transform: capitalize;
     font-size: ${({ fontSize }) => (fontSize ? fontSize : "1rem")};
+  }
+  p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  :hover {
+    transform: ${({ transform }) => (transform ? transform : "")};
+  }
+  :active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   }
 `;
