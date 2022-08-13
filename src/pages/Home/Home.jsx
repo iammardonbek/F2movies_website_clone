@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/common/Navbar/Navbar";
 import { Container } from "../../style";
 import ArrowRight from "../../assets/icons/arrowRIght.png";
@@ -15,6 +15,14 @@ import Socials from "../../components/common/Socials/Socials";
 import Card from "../../components/common/Card/Card";
 
 const Home = () => {
+  const [data, setData] = React.useState([]);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/photos")
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }, []);
+  console.log(data);
+
   return (
     <div className="allFather">
       <Navbar home />
@@ -45,6 +53,14 @@ const Home = () => {
         </Intro>
         <Socials />
         <CardWrapper>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
           <Card />
         </CardWrapper>
       </Container>

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 export const Container = styled.div`
-  max-width: 200px;
+  /* max-width: 190px; */
   cursor: pointer;
   user-select: none;
+  /* flex: 12%; */
 `;
 export const TopCard = styled.div`
   position: relative;

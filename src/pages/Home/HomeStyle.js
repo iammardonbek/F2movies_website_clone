@@ -58,4 +58,24 @@ export const Intro = styled.p`
   font-size: 1.15em;
   line-height: 1.4em;
 `;
-export const CardWrapper = styled.div``;
+export const CardWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, minmax(155px, auto));
+  gap: 15px 5px;
+  flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(6, minmax(160px, auto));
+  }
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(4, minmax(160px, auto));
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, minmax(160px, auto));
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, minmax(160px, auto));
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(1, minmax(160px, auto));
+  }
+`;
