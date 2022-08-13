@@ -58,3 +58,4 @@ export const Intro = styled.p`
   font-size: 1.15em;
   line-height: 1.4em;
 `;
+export const CardWrapper = styled.div``;

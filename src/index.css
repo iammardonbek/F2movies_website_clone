@@ -36,3 +36,6 @@ body {
   display: flex;
   justify-content: center;
 }
+.top-card:hover .Play {
+  opacity: 1;
+}

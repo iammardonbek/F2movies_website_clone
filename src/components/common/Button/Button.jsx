@@ -7,7 +7,7 @@ const Button = ({
   borderRadius,
   children,
   onClick,
-  bgColor,
+  bgcolor,
   fontColor,
   fontSize,
   svg,
@@ -22,7 +22,7 @@ const Button = ({
       width={width}
       height={height}
       borderRadius={borderRadius}
-      bgColor={bgColor}
+      bgcolor={bgcolor}
       fontSize={fontSize}
       type={type}
       fontColor={fontColor}
@@ -30,7 +30,7 @@ const Button = ({
       gap={gap}
       transform={transform}
     >
-      <button bgColor={bgColor}>
+      <button bgColor={bgcolor}>
         <p>{children}</p>
       </button>
       {svg}

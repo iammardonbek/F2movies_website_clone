@@ -3,8 +3,16 @@ import Navbar from "../../components/common/Navbar/Navbar";
 import { Container } from "../../style";
 import ArrowRight from "../../assets/icons/arrowRIght.png";
 import Button from "../../components/common/Button/Button";
-import { HomeSearch, Intro, Input, SearchBar, SearchIcon } from "./HomeStyle";
+import {
+  HomeSearch,
+  Intro,
+  Input,
+  SearchBar,
+  SearchIcon,
+  CardWrapper,
+} from "./HomeStyle";
 import Socials from "../../components/common/Socials/Socials";
+import Card from "../../components/common/Card/Card";
 
 const Home = () => {
   return (
@@ -36,6 +44,9 @@ const Home = () => {
           the links of the most popular and genuine websites here.
         </Intro>
         <Socials />
+        <CardWrapper>
+          <Card />
+        </CardWrapper>
       </Container>
     </div>
   );

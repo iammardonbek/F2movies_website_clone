@@ -17,7 +17,7 @@ const Socials = () => {
           height={"auto"}
           type="social"
           borderRadius={"0"}
-          bgColor="rgb(59, 89, 152)"
+          bgcolor="rgb(59, 89, 152)"
           fontColor={"white"}
           fontSize="14px"
           svg={<Facebook />}
@@ -34,7 +34,7 @@ const Socials = () => {
           height={"auto"}
           type="social"
           borderRadius={"0"}
-          bgColor="rgb(29, 161, 242)"
+          bgcolor="rgb(29, 161, 242)"
           fontColor={"white"}
           fontSize="14px"
           svg={<Twitter />}
@@ -49,7 +49,7 @@ const Socials = () => {
           height={"auto"}
           type="social"
           borderRadius={"0"}
-          bgColor="#848484"
+          bgcolor="#848484"
           transform={"translateY(-8px)"}
           fontColor={"white"}
           fontSize="14px"
@@ -65,7 +65,7 @@ const Socials = () => {
           height={"auto"}
           type="social"
           borderRadius={"0"}
-          bgColor="#CB2027"
+          bgcolor="#CB2027"
           fontColor={"white"}
           transform={"translateY(-8px)"}
           fontSize="14px"
@@ -82,7 +82,7 @@ const Socials = () => {
           height={"auto"}
           type="social"
           borderRadius={"0"}
-          bgColor="#4DC247"
+          bgcolor="#4DC247"
           fontColor={"white"}
           fontSize="14px"
           svg={<WhatssApp />}
@@ -97,7 +97,7 @@ const Socials = () => {
           height={"auto"}
           type="social"
           borderRadius={"0"}
-          bgColor="#0088CC"
+          bgcolor="#0088CC"
           transform={"translateY(-8px)"}
           fontColor={"white"}
           fontSize="14px"
