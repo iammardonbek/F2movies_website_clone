@@ -1,5 +1,4 @@
 import React from "react";
-import Strange from "../../../assets/images/strange.png";
 import PlayIcon from "../../../assets/images/play.png";
 import {
   BottomCard,
@@ -10,23 +9,23 @@ import {
   TopCard,
 } from "./CardStyle";
 
-const Card = () => {
+const Card = ({ data }) => {
   return (
     <Container>
       <TopCard className="top-card">
-        <Quality>HD</Quality>
-        <img src={Strange} alt="strange" />
+        <Quality>{data.quality}</Quality>
+        <img src={data.img} alt="strange" />
         <Play className="Play">
           <img className="card-image" src={PlayIcon} alt="play" />
         </Play>
       </TopCard>
       <BottomCard>
-        <Title>Doctor Strange in the Multiverse of Madness</Title>
+        <Title>{data.title}</Title>
         <section>
-          <div>2022</div>
+          <div className="year">{data.year}</div>
           <div className="dot"></div>
-          <div className="duration">99 min</div>
-          <div className="type">movie</div>
+          <div className="duration">{data.duration}</div>
+          <div className="type">{data.type}</div>
         </section>
       </BottomCard>
     </Container>

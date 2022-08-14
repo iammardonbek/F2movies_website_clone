@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../../components/common/Navbar/Navbar";
 import { Container } from "../../style";
 import ArrowRight from "../../assets/icons/arrowRIght.png";
 import Button from "../../components/common/Button/Button";
+import Movies from "../../mock/MockData";
 import {
   HomeSearch,
   Intro,
@@ -10,19 +11,15 @@ import {
   SearchBar,
   SearchIcon,
   CardWrapper,
+  Selector,
 } from "./HomeStyle";
 import Socials from "../../components/common/Socials/Socials";
 import Card from "../../components/common/Card/Card";
+import { useState } from "react";
+import { TVShows } from "../../mock/MockData";
 
 const Home = () => {
-  const [data, setData] = React.useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/photos")
-      .then((response) => response.json())
-      .then((json) => setData(json));
-  }, []);
-  console.log(data);
-
+  const [selector, setSelector] = useState("movies");
   return (
     <div className="allFather">
       <Navbar home />
@@ -52,16 +49,41 @@ const Home = () => {
           the links of the most popular and genuine websites here.
         </Intro>
         <Socials />
+        <Selector>
+          <Button
+            onClick={() => setSelector("movies")}
+            width={"100px"}
+            height={"30px"}
+            type="social"
+            borderRadius={"3px"}
+            bgcolor={selector === "movies" ? "#e4ff00" : "#e9ecef"}
+            fontColor={"#212529"}
+            fontSize="14px"
+            svg={""}
+            flexD
+          >
+            <i class="fa-solid fa-circle-play"></i>
+            movies
+          </Button>
+          <Button
+            onClick={() => setSelector("tv-shows")}
+            width={"auto"}
+            height={"30px"}
+            type="social"
+            borderRadius={"3px"}
+            bgcolor={selector === "tv-shows" ? "#e4ff00" : "#e9ecef"}
+            fontColor={"#212529"}
+            fontSize="14px"
+            flexD
+          >
+            <i class="fa-solid fa-list"></i>
+            TV-Shows
+          </Button>
+        </Selector>
         <CardWrapper>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {selector === "movies"
+            ? Movies.map((value) => <Card key={value.id} data={value} />)
+            : TVShows.map((value) => <Card key={value.id} data={value} />)}
         </CardWrapper>
       </Container>
     </div>

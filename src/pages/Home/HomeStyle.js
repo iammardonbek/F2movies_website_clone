@@ -79,3 +79,8 @@ export const CardWrapper = styled.div`
     grid-template-columns: repeat(1, minmax(160px, auto));
   }
 `;
+export const Selector = styled.div`
+  display: flex;
+  margin: 20px 0 10px;
+  gap: 10px;
+`;

@@ -3,16 +3,17 @@ export const Container = styled.div`
   /* max-width: 190px; */
   cursor: pointer;
   user-select: none;
-  /* flex: 12%; */
 `;
 export const TopCard = styled.div`
   position: relative;
   height: 260px;
   overflow: hidden;
-  object-fit: contain;
   display: flex;
   justify-content: center;
+  background-color: red;
   img {
+    object-fit: cover;
+    width: 100%;
     height: 100%;
   }
   :hover img {
@@ -57,6 +58,14 @@ export const BottomCard = styled.div`
       border: 1px solid white;
       padding: 2px;
       font-size: 12px;
+    }
+    .year {
+      font-size: 13px;
+      font-weight: 100;
+    }
+    .duration {
+      font-weight: 100;
+      font-size: 13px;
     }
   }
 `;
