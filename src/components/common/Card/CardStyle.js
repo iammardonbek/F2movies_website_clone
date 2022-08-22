@@ -10,7 +10,6 @@ export const TopCard = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
-  background-color: red;
   img {
     object-fit: cover;
     width: 100%;
